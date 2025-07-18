@@ -15,5 +15,6 @@ spec:
       containers:
       - name: amazon
         image: adiii007/amazon:latest
+         imagePullPolicy: Always
         ports:
         - containerPort: 3000
