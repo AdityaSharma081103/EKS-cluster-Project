@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Myntra-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Myntra
+  template:
+    metadata:
+      labels:
+        app: Myntra
+    spec:
+      containers:
+      - name: Myntra
+        image: adiii007/Myntra
+        ports:
+        - containerPort: 3000
