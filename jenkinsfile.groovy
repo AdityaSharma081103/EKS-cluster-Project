@@ -35,7 +35,7 @@ pipeline {
         withCredentials([file(credentialsId: 'gcloud-key', variable: 'GCLOUD_KEY')]) {
           sh '''
             gcloud auth activate-service-account --key-file=$GCLOUD_KEY
-            gcloud container clusters get-credentials autopilot-cluster-1 --zone=us-central1 --project=gke-cicd-466117
+            gcloud container clusters get-credentials ecommerce-cluster--zone=asia-south1 --project=gke-cicd-466117
             kubectl apply -f k8s/
           '''
         }
