@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-        git url: "https://github.com/AdityaSharma081103/${JOB_NAME}.git"
+        git branch: 'amazon', url: 'https://github.com/AdityaSharma081103/EKS-cluster-Project/'
       }
     }
 
