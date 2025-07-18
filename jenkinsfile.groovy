@@ -37,7 +37,7 @@ pipeline {
             gcloud auth activate-service-account --key-file=$GCLOUD_KEY
             gcloud container clusters get-credentials ecommerce-cluster --zone=asia-south1 --project=gke-cicd-466117
             kubectl apply -f Deployment.yaml
-            kubectl apply -f service.yaml
+            kubectl apply -f Service.yaml
             
           '''
         }
